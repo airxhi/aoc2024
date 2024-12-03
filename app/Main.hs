@@ -1,6 +1,7 @@
 module Main (main) where
 
 import Day1
+import Day2
 
 run :: (String -> IO()) -> String -> IO ()
 run f fileName =
@@ -11,4 +12,5 @@ run f fileName =
 main :: IO ()
 main = 
     do
-        run day1 "inputs/1.txt"
+        -- run day1 "inputs/1.txt"
+        run day2 "inputs/2.txt"

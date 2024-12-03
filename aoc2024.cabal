@@ -27,6 +27,7 @@ extra-source-files: CHANGELOG.md
 
 library
     exposed-modules:  Day1
+    exposed-modules:  Day2
 
     -- Modules included in this library but not exported.
     -- other-modules:
@@ -34,6 +35,7 @@ library
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
     build-depends:    base ^>=4.17.2.0, MissingH
+        , HUnit >= 1.6
         , containers
         , parsec
         , sort
@@ -60,3 +62,16 @@ executable aoc2024
 
     hs-source-dirs:   app
     default-language: Haskell2010
+
+test-suite tests
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      app, src
+  main-is:             Test.hs
+  build-depends:       base >= 4.14 && < 5,
+                       HUnit >= 1.6,
+                       MissingH,
+                       containers,
+                       parsec,
+                       sort,
+                       split >=0.2.3.5
+  default-language:    Haskell2010
